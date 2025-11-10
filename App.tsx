@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
@@ -10,7 +9,7 @@ import { Alertas } from './components/Alertas';
 import { Modal, ModalContent } from './components/Modal';
 
 export default function App() {
-  const [activeView, setActiveView] = useState('Inicio');
+  const [activeView, setActiveView] = useState<string>('Inicio');
   const [initialObsoletosFilter, setInitialObsoletosFilter] = useState<string | null>(null);
   const [modalState, setModalState] = useState<{
     isOpen: boolean;
@@ -28,14 +27,21 @@ export default function App() {
   const renderContent = () => {
     switch (activeView) {
       case 'Inicio':
-        return <Dashboard setActiveView={setActiveView} setInitialObsoletosFilter={setInitialObsoletosFilter} />;
+        return (
+          <Dashboard 
+            setActiveView={setActiveView} 
+            setInitialObsoletosFilter={setInitialObsoletosFilter} 
+          />
+        );
       case 'Gestión de Obsoletos':
-        return <GestionObsoletos 
-                  openModal={handleOpenModal} 
-                  closeModal={handleCloseModal}
-                  initialFilter={initialObsoletosFilter}
-                  clearInitialFilter={() => setInitialObsoletosFilter(null)} 
-               />;
+        return (
+          <GestionObsoletos 
+            openModal={handleOpenModal} 
+            closeModal={handleCloseModal}
+            initialFilter={initialObsoletosFilter}
+            clearInitialFilter={() => setInitialObsoletosFilter(null)} 
+          />
+        );
       case 'Gestión de Descuentos':
         return <GestionDescuentos openModal={handleOpenModal} closeModal={handleCloseModal} />;
       case 'Monitoreo y Optimización':
@@ -43,7 +49,12 @@ export default function App() {
       case 'Alertas':
         return <Alertas openModal={handleOpenModal} closeModal={handleCloseModal} />;
       default:
-        return <Dashboard setActiveView={setActiveView} setInitialObsoletosFilter={setInitialObsoletosFilter} />;
+        return (
+          <Dashboard 
+            setActiveView={setActiveView} 
+            setInitialObsoletosFilter={setInitialObsoletosFilter} 
+          />
+        );
     }
   };
 

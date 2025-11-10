@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { CheckboxIcon, DownloadIcon, SearchIcon, TinySparkleIcon, ApplyIcon, WarningIcon } from './Icons';
 import { ModalContent } from './Modal';

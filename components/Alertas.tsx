@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useMemo } from 'react';
 import { CheckboxIcon } from './Icons';
 import { ModalContent } from './Modal';

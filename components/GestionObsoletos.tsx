@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { SearchIcon, InfoIcon, SortIcon, CheckboxIcon, InboxIcon } from './Icons';
 import { ModalContent } from './Modal';

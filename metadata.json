@@ -1,0 +1,5 @@
+{
+  "name": "Smart Clear IA Dashboard",
+  "description": "A UI mockup for 'Smart Clear IA', a web dashboard that automates commercial settlement management. It analyzes sales history, margins, and turnover to suggest optimal discounts and issue alerts for products at risk of shrinkage or overstock.",
+  "requestFramePermissions": []
+}
